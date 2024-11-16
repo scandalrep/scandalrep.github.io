@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Анкета посетителя ресторана</h1>
+    <form action="">
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <label for="name">Имя</label><!--Метка для поля ввода с ИД name-->
+            <input type="text" name="name" id="input-name"><br>
+            <label for="phone">Телефон</label><!--Метка для поля ввода с ИД name-->
+            <input type="text" name="phone" id="input-phone"><br>
+            <label for="email">Электронная почта</label><!--Метка для поля ввода с ИД name-->
+            <input type="email" name="email" id="input-email"><br>
+            <label for="date">Дата посещения</label><!--Метка для поля ввода с ИД name-->
+            <input type="date" name="date" id="input-date"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Персональная информация</legend>
+            <label for="age">Возраст</label><!--Метка для поля ввода с ИД name-->
+            <input type="number" name="age" id="input-age" min="1" max="100" step="1"><br>
+            <label for="Kitchen">Любимая кухня</label><!--Метка для поля ввода с ИД name-->
+            <select id="Kitchen" name="Kitchen">
+                <option value=""></option>
+                <option value="Картошка с грибами">Картошка с грибами</option>
+                <option value="Паста Корбанара">Паста Корбанара</option>
+                <option value="Пельмени">Пельмени</option>
+                <option value="Макароны с курицей">Макароны с курицей</option>
+            </select><br>
+                <label for="Bludo">Какие блюда Вы бы хотели увидеть в меню?</label><!--Метка для поля ввода с ИД name-->
+                <textarea name="Bludo" id="input-Bludo"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Оценка нашего заведения</legend>
+            <label for="estimation">Почему Вы выбрали наше заведение?</label><!--Метка для поля ввода с ИД name--><br>
+            <input type="radio">Недалеко от дома/работы<br>
+            <input type="radio">Увидел рекламу<br>
+            <input type="radio">Посоветовали<br>
+            <input type="radio">Оптимальное соотношение цены и качества<br>
+
+            <label for="estimation">Вы будете рекомендовать наше заведение своим знакомым?</label><!--Метка для поля ввода с ИД name--><br>
+            <input type="radio">Да<br>
+            <input type="radio">Нет
+        </fieldset>
+        <fieldset>
+            <input type="submit" value = "Отправить">
+        </fieldset>
+    </form>
+    
+</body>
+</html>
