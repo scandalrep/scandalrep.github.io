@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Right Digit</title>
+    </head>
+<body>
+
+    <h1>Добавление цифры к числу</h1>
+    <label for="numberK">Введите целое положительное число K:</label><br>
+    <input type="number" id="numberK" min="1" required><br>
+
+    <label for="digitD1">Введите цифру  (0-9):</label><br>
+    <input type="number" id="digitD1" min="0" max="9" required><br>
+
+    <label for="digitD2">Введите цифру  (0-9):</label><br>
+    <input type="number" id="digitD2" min="0" max="9" required><br>
+
+    <button onclick="processDigits()">Добавить цифры</button>
+
+    <h2>Результаты:</h2>
+    <div id="results"></div>
+
+    
+
+    <script>
+        function AddRightDigit(D, K) {
+            return K.toString() + D.toString();
+        }
+
+        function processDigits() {
+            const K = parseInt(document.getElementById('numberK').value);
+            const D1 = parseInt(document.getElementById('digitD1').value);
+            const D2 = parseInt(document.getElementById('digitD2').value);
+
+            let result = AddRightDigit(D1, K);
+            document.getElementById('results').innerHTML += `Результат после добавления D1: ${result}<br>`;
+
+            result = AddRightDigit(D2, result);
+            document.getElementById('results').innerHTML += `Результат после добавления D2: ${result}<br>`;
+        }
+    </script>
+    
+</body>
+</html>
